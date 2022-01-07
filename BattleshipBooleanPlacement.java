@@ -1,0 +1,1654 @@
+/*
+Dhruv K. Saligram
+4/1/18
+This is a program that allows the user to play the classic battleships game
+This class, when called, creates a boolean 2D array to recognize where the ships are placed
+ */
+package saligrambattleship;
+
+public class BattleshipBooleanPlacement {
+
+    //Setting parameters below:
+    public static boolean[][] placement(String coordinateInput, String orientation, boolean[][] coordinateTester) {
+
+        //Setting up flag below:
+        boolean flag;
+        flag = false;
+
+        //Checking if user's placed ship is in A row below:
+        if (coordinateInput.charAt(0) == 'A') {
+            //Checking if user's orientation is vertical below:
+            if (orientation.equals("V")) {
+                //Testing for each individial A coordinate below:
+                if (coordinateInput.equals("A1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[0][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[0][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[0][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[0][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[0][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[0][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[0][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[0][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[0][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[0][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[0][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[0][i] = true;
+                        }
+                    }
+                }
+            } //Checking if user's orientation is horizontal below:
+            else if (orientation.equals("H")) {
+                //Testing for each individial A coordinate below:
+                if (coordinateInput.equals("A1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][0] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[i][0] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][1] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[i][1] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][2] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[i][2] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][3] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[i][3] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][4] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[i][4] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][5] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[i][5] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A7")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][6] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[i][6] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A8")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][7] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+
+                            coordinateTester[i][7] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A9")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][8] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[i][8] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("A10")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[a][9] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[i][9] = true;
+                        }
+                    }
+                }
+            }
+        } //Checking if user's placed ship is in B row below:
+        else if (coordinateInput.charAt(0) == 'B') {
+            //Checking if user's orientation is horizontal below:
+            if (orientation.equals("H")) {
+                //Testing for each individial B coordinate below:
+                if (coordinateInput.equals("B1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][0] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][0] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][1] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][1] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][2] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][2] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][3] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][3] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][4] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][4] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][5] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][5] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B7")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][6] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][6] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B8")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][7] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][7] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B9")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][8] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][8] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B10")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[a][9] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[i][9] = true;
+                        }
+                    }
+                }
+            } //Checking if user's orientation is vertical below:
+            else if (orientation.equals("V")) {
+                if (coordinateInput.equals("B1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[1][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[1][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[1][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[1][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[1][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[1][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[1][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[1][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[1][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[1][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("B6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[1][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[1][i] = true;
+                        }
+                    }
+                }
+            }
+        } //Checking if user's placed ship is in C row below:
+        else if (coordinateInput.charAt(0) == 'C') {
+            //Checking if user's orientation is horizontal below:
+            if (orientation.equals("H")) {
+                //Testing for each individial C coordinate below:
+                if (coordinateInput.equals("C1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][0] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][0] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][1] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][1] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][2] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][2] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][3] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][3] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][4] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][4] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][5] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][5] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C7")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][6] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][6] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C8")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][7] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][7] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C9")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][8] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][8] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C10")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[a][9] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[i][9] = true;
+                        }
+                    }
+                }
+            } else if (orientation.equals("V")) {
+                if (coordinateInput.equals("C1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[2][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[2][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[2][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[2][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[2][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[2][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[2][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[2][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[2][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[2][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("C6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[2][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[2][i] = true;
+                        }
+                    }
+                }
+            }
+        } //Checking if user's placed ship is in D row below:
+        else if (coordinateInput.charAt(0) == 'D') {
+            //Checking if user's orientation is horizontal below:
+            if (orientation.equals("H")) {
+                //Testing for each individial D coordinate below:
+                if (coordinateInput.equals("D1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][0] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][0] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][1] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][1] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][2] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][2] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][3] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][3] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][4] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][4] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][5] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][5] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D7")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][0] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][6] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D8")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][7] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][7] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D9")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][8] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][8] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D10")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[a][9] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[i][9] = true;
+                        }
+                    }
+                }
+            } //Checking if user's orientation is vertical below:
+            else if (orientation.equals("V")) {
+                if (coordinateInput.equals("D1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[3][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[3][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[3][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[3][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[3][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[3][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[3][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[3][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[3][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[3][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("D6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[3][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[3][i] = true;
+                        }
+                    }
+                }
+            }
+        } //Checking if user's placed ship is in B row below:
+        else if (coordinateInput.charAt(0) == 'E') {
+            //Checking if user's orientation is horizontal below:
+            if (orientation.equals("H")) {
+                //Testing for each individial E coordinate below:
+                if (coordinateInput.equals("E1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][0] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][0] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][1] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][1] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][2] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][2] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][3] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][3] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][4] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][4] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][5] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][5] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E7")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][6] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][6] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E8")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][7] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][7] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E9")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][8] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][8] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E10")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[a][9] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[i][9] = true;
+                        }
+                    }
+                }
+            } else if (orientation.equals("V")) {
+                if (coordinateInput.equals("E1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[4][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[4][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[4][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[4][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[4][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[4][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[4][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[4][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[4][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[4][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("E6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[4][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[4][i] = true;
+                        }
+                    }
+                }
+            }
+        } else if (coordinateInput.charAt(0) == 'F') {
+            if (orientation.equals("H")) {
+                if (coordinateInput.equals("F1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][0] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][0] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][1] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][1] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][2] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][2] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][3] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][3] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][4] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][4] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][5] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][5] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F7")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][6] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][6] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F8")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][7] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][7] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F9")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][8] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][8] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F10")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[a][9] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[i][9] = true;
+                        }
+                    }
+                }
+            } else if (orientation.equals("V")) {
+                if (coordinateInput.equals("F1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[5][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[5][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[5][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[5][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[5][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[5][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[5][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[5][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[5][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[5][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("F6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[5][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[5][i] = true;
+                        }
+                    }
+                }
+            }
+        } else if (coordinateInput.charAt(0) == 'G') {
+            if (orientation.equals("V")) {
+                if (coordinateInput.equals("G1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[6][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[6][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("G2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[6][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[6][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("G3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[6][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[6][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("G4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[6][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[6][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("G5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[6][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[6][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("G6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[6][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[6][i] = true;
+                        }
+                    }
+                }
+            }
+        } else if (coordinateInput.charAt(0) == 'H') {
+            if (orientation.equals("V")) {
+                if (coordinateInput.equals("H1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[7][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[7][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("H2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[7][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[7][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("H3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[7][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[7][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("H4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[7][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[7][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("H5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[7][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[7][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("H6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[7][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[7][i] = true;
+                        }
+                    }
+                }
+            }
+        } else if (coordinateInput.charAt(0) == 'I') {
+            if (orientation.equals("V")) {
+                if (coordinateInput.equals("I1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[8][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[8][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("I2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[8][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[8][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("I3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[8][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[8][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("I4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[8][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[8][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("I5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[8][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[8][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("I6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[8][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[8][i] = true;
+                        }
+                    }
+                }
+            }
+        } else if (coordinateInput.charAt(0) == 'J') {
+            if (orientation.equals("V")) {
+                if (coordinateInput.equals("J1")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 0; a < 5; a++) {
+                        if (coordinateTester[9][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 0; i < 5; i++) {
+                            coordinateTester[9][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("J2")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 1; a < 6; a++) {
+                        if (coordinateTester[9][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 1; i < 6; i++) {
+                            coordinateTester[9][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("J3")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 2; a < 7; a++) {
+                        if (coordinateTester[9][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 2; i < 7; i++) {
+                            coordinateTester[9][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("J4")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 3; a < 8; a++) {
+                        if (coordinateTester[9][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 3; i < 8; i++) {
+                            coordinateTester[9][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("J5")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 4; a < 9; a++) {
+                        if (coordinateTester[9][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 4; i < 9; i++) {
+                            coordinateTester[9][i] = true;
+                        }
+                    }
+                } else if (coordinateInput.equals("J6")) {
+                    //Testing to see if a ship has already been placed in the same region below:
+                    for (int a = 5; a < 10; a++) {
+                        if (coordinateTester[9][a] == true) {
+                            flag = true;
+                        }
+                    }
+                    //If the spots are all open, the user proceeds with placement below:
+                    if (flag == false) {
+                        for (int i = 5; i < 10; i++) {
+                            coordinateTester[9][i] = true;
+                        }
+                    }
+                }
+            }
+        }
+        //Returning boolean 2D array to recognize where the ships are placed below:
+        return coordinateTester;
+    }
+}
